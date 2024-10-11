@@ -1,0 +1,482 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --red: red;
+    --white: white;
+    --black: black;
+    --rgba: rgba(193, 193, 193,0.3);
+    --random: #42a8f0;
+    --imp: #ff7f7f;
+}
+/* navbar start */
+
+/* responsive ness */
+.slide1 {
+    background: url('../image/images/fighter.webp');
+}
+.slide2 {
+    background: url('../image/images/pathaan.jpg');
+}
+.slide3 {
+    background: url('../image/images/shiv.jpg');
+}
+.slide4 {
+    background: url('../image/images/pushpa.jpg');
+}
+.slide5 {
+    background: url('../image/images/states.jpg');
+}
+/* responsive ness */
+nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.7rem;
+}
+
+
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    ul li {
+        font-size: 20px;
+    }
+
+    ul li {
+        margin-right: 20px;
+    }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 20px;
+    }
+
+    ul {
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        background-color: black;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+        ul li {
+            margin: 20px 0;
+        }
+
+            ul li a {
+                font-size: 20px;
+            }
+
+    #check:checked ~ ul {
+        right: 0;
+        z-index: 1;
+    }
+}
+
+
+/* navbar end */
+/* hero section start */
+.hero {
+    width: 100vw;
+    height: 89.5vh;
+    overflow-x: hidden;
+    background: var(--black);
+}
+
+/* slider start */
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    position: absolute;
+    inset: 30px 200px 80px 80px;
+    background: #ccc;
+    border-radius: 20px;
+}
+
+    .slider .sliders {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 240px;
+        height: 340px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        transition: 0.5s;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    }
+
+        .slider .sliders:nth-child(1),
+        .slider .sliders:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateY(0);
+            box-shadow: 0 25px 50px rgba(0,0,0,0);
+            background-size: cover;
+        }
+
+        .slider .sliders:nth-child(3) {
+            background-size: cover;
+            left: calc(50% + 240px);
+        }
+
+        .slider .sliders:nth-child(4) {
+            background-size: cover;
+            left: calc(50% + 500px);
+        }
+
+        .slider .sliders:nth-child(5) {
+            background-size: cover;
+            left: calc(50% + 760px);
+        }
+
+        .slider .sliders:nth-child(6) {
+            background-size: cover;
+            left: calc(50% + 1020px);
+            opacity: 0;
+        }
+
+.buttons {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+
+    .buttons span {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .buttons span::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-top: 4px solid white;
+            border-left: 4px solid white;
+            transform: rotate(315deg) translate(2px,2px);
+        }
+
+        .buttons span:nth-child(2)::before {
+            transform: rotate(135deg) translate(2px,2px);
+        }
+
+        .buttons span:active {
+            opacity: 0.5;
+        }
+
+.content {
+    position: relative;
+    padding: 40px;
+    max-width: 600px;
+    transition: 0.5;
+    transition-delay: 0s;
+    transform: translateY(40px);
+    overflow: hidden;
+    z-index: 100000;
+    opacity: 0;
+}
+
+.slider .sliders:nth-child(1) .content,
+.slider .sliders:nth-child(2) .content {
+    transform: translateY(0px);
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+
+
+/* ------------------------------------------- */
+.content .name {
+    color: var(--red);
+    text-shadow: 2px 2px 10px var(--red);
+}
+
+.content .about {
+    color: var(--white);
+    line-height: 1.7vw;
+    font-size: 1.3vw;
+    padding-top: 1vw;
+    text-shadow: 2px 2px 10px var(--black);
+}
+
+.content .watch {
+    padding: 0.5vw;
+    margin-top: 1vw;
+    border: none;
+    background: var(--red);
+    border-radius: 0.2vw;
+}
+
+    .content .watch a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 15px;
+    }
+/* slider end */
+/* hero section end */
+/* card start */
+.title {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black);
+}
+
+    .title h1 {
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--white);
+        text-decoration: underline;
+    }
+
+.card {
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    background: var(--black);
+    margin: auto;
+    place-items: center;
+    overflow-x: scroll;
+}
+
+.infinite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(250px * 34);
+    animation: scrolling 120s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 17));
+    }
+}
+
+.center {
+    height: 250px;
+    width: 100vw;
+    perspective: 100px;
+}
+
+.box {
+    height: 250px;
+    width: 100vw;
+    perspective: 100px;
+}
+
+    .box img {
+        width: 70%;
+        height: 200px;
+        transition: 2s;
+    }
+
+        .box img:hover {
+            transform: translateZ(0.2vw);
+        }
+
+.infinite:hover {
+    animation-play-state: paused;
+}
+
+.link {
+    margin-top: 5px;
+    padding-left: 16%;
+}
+
+    .link button a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+.box .btt {
+    bottom: 20px;
+    left: 63px;
+    width: 100px;
+    height: 40px;
+    background: rgba(224, 14, 14, 0.9);
+    color: var(--white);
+    border: none;
+}
+/* card end */
+
+
+/* responsive ness end*/
+
+/* song caruosel end */
+/* Footer section start */
+
+
+.footer {
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background: var(--black);
+    color: var(--white);
+}
+
+.footer1 {
+    gap: 20px;
+}
+
+.identi {
+    display: flex;
+    gap: 0.3vw;
+    align-items: center;
+}
+
+    .identi i {
+        font-size: 2vw;
+    }
+
+.media {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+    .media i {
+        font-size: 1.5vw;
+        border: 1px solid var(--white);
+        padding: 0.8vw;
+    }
+
+    .media a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+        .media a i:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+.size2 {
+    line-height: 40px;
+}
+
+    .size2 a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 1.3vw;
+    }
+
+.size3 {
+    padding: 20px 5px;
+}
+
+.log {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 0.2vw;
+}
+
+    .log a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+.Reg {
+    width: 105px;
+    height: 40px;
+    font-size: 18px;
+    background: var(--red);
+    border: none;
+    border-radius: 0.2vw;
+}
+
+    .Reg a {
+        text-decoration: none;
+        color: var(--white);
+    }
+/* Footer section end */
+
+.copyright{
+    width:100%;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.copyright p a{
+    text-decoration:none;
+    color:black;
+}

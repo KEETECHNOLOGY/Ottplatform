@@ -1,0 +1,71 @@
+﻿@model ottplatform.Models.Admin
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz page</title>
+   <link href="~/css/Admin.css" rel="stylesheet" />
+  
+</head>
+<body>
+    <div class="admin ">
+        <h1>Admin Managment</h1>
+
+        <button><a asp-action="upload2">Hollywood</a></button>
+
+        <hr/><br />
+        <form class="size" method="post" asp-action="upload"  enctype="multipart/form-data">
+            <h1>Hollywood Movie</h1>
+            <div class="size2">
+         <label>Main Poster</label>
+                <div class="input_box"><input type="file" name="photo" /></div>
+            </div><br />
+            <div class="size1">
+                <label>Information about Poster</label>
+                <div class="input_box"><input type="text" asp-for="moviename" /></div>
+            </div><br />
+
+             <div class="size1">
+                 <label>Information about Poster</label>
+                <div class="input_box"><input type="text" asp-for="info" /></div>
+             </div><br />
+
+             <div class="size2">
+                 <label>1st image</label>
+                <div class="input_box"><input type="file" name="photo1" /></div>
+             </div><br />
+
+             <div class="size2">
+                 <label>2nd image</label>
+                <div class="input_box"><input type="file" name="photo2" /></div>
+             </div><br />
+
+             <div class="size2">
+                 <label>3rd image</label>
+                <div class="input_box"><input type="file" name="photo3" /></div>
+             </div><br />
+
+
+             <div class="size2">
+                <label>4rd image</label>
+                <div class="input_box"><input type="file" name="photo4" /></div>
+             </div><br />        
+             <button class="btn">Submit</button>
+        </form>
+        
+    </div>
+
+     <!-- Second admin-->
+    
+
+</body>
+</html>

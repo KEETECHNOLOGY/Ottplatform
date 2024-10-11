@@ -1,0 +1,295 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="~/css/style.css" rel="stylesheet" />
+<link href="~/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- navbar start -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" >
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo" > <i class="fa-solid fa-shield-cat"></i> Movies</label>
+        <ul data-aos="fade-up">
+            <li><a class="active" asp-action="#Home">Home</a></li>
+            <li><a asp-action="about">About us</a></li>
+            <li><a asp-action="Series">Series</a></li>
+            <li><a asp-action="Movies">Movies</a></li>
+            <li><a asp-action="Contact">Contact us</a></li>
+        </ul>
+    </nav>
+
+
+<hr>
+<!-- navbar end -->
+ <!-- hero section start -->
+    <div class="hero">
+        <!-- slider start -->
+        <div class="container" >
+            <div class="slider">
+                <div class="sliders  slide1">
+                    <div class="content">
+                        <h1 class="name">Movies Name - Fighter</h1>
+                        <p class="about"> Fighter is a Hindi language aerial action thriller, a story of top Indian Air Force (IAF) aviators coming together in the face of imminent danger, to battle the country's internal and external forces.</p>
+                        <button class="watch"><a asp-action="Movies">Watch now</a></button>
+                    </div>
+                </div>
+                <div class="sliders  slide2">
+                    <div class="content">
+                        <h1 class="name">Movies Name - Pathaan</h1>
+                        <p class="about">A Pakistani general hires a private terror outfit to conduct attacks in India while Pathaan, an Indian secret agent, is on a mission to form a special unit.?</p>
+                        <button class="watch"><a asp-action="Movies">Watch now</a></button>
+                    </div>
+                </div>
+                <div class="sliders  slide3">
+                    <div class="content">
+                        <h1 class="name">Movies Name - Bholaa</h1>
+                        <p class="about">After 10 years of imprisonment, Bholaa is finally going home to meet his young daughter. However, his journey is not so simple as he soon faces a pathway full of crazy obstacles, with death lurking around every corner.?</p>
+                        <button class="watch"><a asp-action="Movies">Watch now</a></button>
+                    </div>
+                </div>
+                <div class="sliders slide4">
+                    <div class="content">
+                        <h1 class="name">Movies Name - Pushpa</h1>
+                        <p class="about">The film teaches us that true leadership is not determined by titles or positions. It's about taking initiative, making tough decisions, and leading by example, just as Pushpa does. His actions speak louder than words?</p>
+                        <button class="watch"><a asp-action="Movies">Watch now</a></button>
+                    </div>
+                </div>
+                <div class="sliders slide5">
+                    <div class="content">
+                        <h1 class="name">Movies Name - 2 States</h1>
+                        <p class="about">The story is about a couple Krish and Ananya, who hail from two states of India, Punjab and Tamil Nadu, respectively, who are deeply in love and want to marry?</p>
+                        <button class="watch"><a asp-action="Movies">Watch now</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+        </div>
+ <!-- hero section end -->
+  <!-- scroll movie section start -->
+   <hr>
+   <div class="title">
+        <h1 >Bollywood Movies</h1>
+   </div>
+   <div class="card">
+        <div class="infinite" >
+       <div class="box">
+                <img src="~/image/small img/1.jpg" alt="">
+      <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+       <div class="box">   <img src="~/image/small img/88b34288432989.5dd5e72e4fffa.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+            <div class="box">
+                <img src="~/image/small img/Adventure Movie l.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+            <div class="box">
+                <img src="~/image/small img/Binny-And-Family.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+            <div class="box">
+                <img src="~/image/small img/c618cd88432989(1).5dd5e72e505d1.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+            <div class="box">
+                <img src="~/image/small img/Coolie.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+            <div class="box"><img src="~/image/small img/Emergency-3.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Jigra-2-1.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Kill-4-322x572.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Maalik.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Maidaan-6.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Rautu-Ka-Raaz-1-322x402.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Ruslaan-322x402.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Savi.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Sector-36.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Stree-2-1-1.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Vicky.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+        <!--Same image second time past-->
+            <div class="box">
+                <img src="~/image/small img/1.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="~/image/small img/88b34288432989.5dd5e72e4fffa.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="~/image/small img/Adventure Movie l.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="~/image/small img/Binny-And-Family.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="~/image/small img/c618cd88432989(1).5dd5e72e505d1.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="~/image/small img/Coolie.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box"><img src="~/image/small img/Emergency-3.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Jigra-2-1.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Kill-4-322x572.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Maalik.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Maidaan-6.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Rautu-Ka-Raaz-1-322x402.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Ruslaan-322x402.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Savi.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Sector-36.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Stree-2-1-1.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="~/image/small img/Vicky.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <!--Same image second time past-->
+   </div>
+   </div>
+   <hr>
+  <!-- scroll movie section end -->
+   <!-- caruosel start  -->
+  
+ <hr>
+   <!-- caruosel end -->
+
+   <!-- Hollywood section start-->
+   <div class="title">
+        <h1 data-aos="fade-up">Hollywood Movies</h1>
+   </div>
+   <div class="card">
+        <div class="infinite" >
+       <div class="box">
+         <img src="https://m.media-amazon.com/images/I/71OHH9HaB5S._SY741_.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+       <div class="box">   <img src="https://m.media-amazon.com/images/I/518y-Cuw2GL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+       <div class="box"><img src="https://w0.peakpx.com/wallpaper/828/952/HD-wallpaper-aquaman-poster-jason-momoa-fantasy-movie-hollywood-underwater-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+       <div class="box"><img src="https://w0.peakpx.com/wallpaper/196/795/HD-wallpaper-justice-league-sc-action-dc-hbo-hollywood-justice-league-movie-poster-warner-warner-bros-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+       <div class="box"><img src="https://w0.peakpx.com/wallpaper/279/149/HD-wallpaper-avengers-green-poster-chadwick-boseman-black-panther-scarlett-johansson-black-widow-avengers-infinity-war-fantasy-movie-hollywood-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+       <div class="box"><img src="https://w0.peakpx.com/wallpaper/881/801/HD-wallpaper-aladin-poster-aladdin-movie-hollywood-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+      </div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/107/103/HD-wallpaper-loki-thor-ragnarok-comics-holi-hollywood-loki-marve-marvel-marvel-cinematic-universe-marvel-comics-marvel-movie-movie-poster-thor-thor-ragnarok-tom-hiddleston-yellow-thumbnail.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/595/131/HD-wallpaper-venom-poster-marvel-parasite-poster-venom-thumbnail.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/874/986/HD-wallpaper-poster-of-the-lion-king-thumbnail.jpg" alt=""><div class="link"><button class="btt"><a asp-action ="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/685/645/HD-wallpaper-official-black-panther-wakanda-forever-poster-thumbnail.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://m.media-amazon.com/images/I/5113J-ihckL._SX300_SY300_QL70_FMwebp_.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://m.media-amazon.com/images/I/517YbbSAb7L._AC_.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://m.media-amazon.com/images/M/MV5BNWI1NjkxM2MtOTU4My00YzQ5LTliNGMtNmFlM2U5NWM3MDY1XkEyXkFqcGdeQXVyNTUyMzE4Mzg@@._V1_.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://upload.wikimedia.org/wikipedia/en/c/cb/TF2SteelPoster.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://i.pinimg.com/564x/a9/9c/d8/a99cd8dc889ba5a4c3770f4e665d9cf6.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqDaLgP24Jb4Qb7RDY6HZY2ESjZvOrfQuxlA&s" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://rukminim2.flixcart.com/image/850/1000/jn3hocw0/poster/k/v/8/medium-hollywood-movie-wall-poster-transformers-5-optimus-prime-original-imaf9uuhqtzr9gpq.jpeg?q=20&crop=false" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+        <!--Same image second time past-->
+            <div class="box">
+                <img src="https://m.media-amazon.com/images/I/71OHH9HaB5S._SY741_.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="https://m.media-amazon.com/images/I/518y-Cuw2GL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="https://w0.peakpx.com/wallpaper/828/952/HD-wallpaper-aquaman-poster-jason-momoa-fantasy-movie-hollywood-underwater-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="https://w0.peakpx.com/wallpaper/196/795/HD-wallpaper-justice-league-sc-action-dc-hbo-hollywood-justice-league-movie-poster-warner-warner-bros-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="https://w0.peakpx.com/wallpaper/279/149/HD-wallpaper-avengers-green-poster-chadwick-boseman-black-panther-scarlett-johansson-black-widow-avengers-infinity-war-fantasy-movie-hollywood-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box">
+                <img src="https://w0.peakpx.com/wallpaper/881/801/HD-wallpaper-aladin-poster-aladdin-movie-hollywood-thumbnail.jpg" alt="">
+                <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div>
+            </div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/107/103/HD-wallpaper-loki-thor-ragnarok-comics-holi-hollywood-loki-marve-marvel-marvel-cinematic-universe-marvel-comics-marvel-movie-movie-poster-thor-thor-ragnarok-tom-hiddleston-yellow-thumbnail.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/595/131/HD-wallpaper-venom-poster-marvel-parasite-poster-venom-thumbnail.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/874/986/HD-wallpaper-poster-of-the-lion-king-thumbnail.jpg" alt=""><div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://w0.peakpx.com/wallpaper/685/645/HD-wallpaper-official-black-panther-wakanda-forever-poster-thumbnail.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://m.media-amazon.com/images/I/5113J-ihckL._SX300_SY300_QL70_FMwebp_.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://m.media-amazon.com/images/I/517YbbSAb7L._AC_.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://m.media-amazon.com/images/M/MV5BNWI1NjkxM2MtOTU4My00YzQ5LTliNGMtNmFlM2U5NWM3MDY1XkEyXkFqcGdeQXVyNTUyMzE4Mzg@@._V1_.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://upload.wikimedia.org/wikipedia/en/c/cb/TF2SteelPoster.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://i.pinimg.com/564x/a9/9c/d8/a99cd8dc889ba5a4c3770f4e665d9cf6.jpg" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqDaLgP24Jb4Qb7RDY6HZY2ESjZvOrfQuxlA&s" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <div class="box"><img src="https://rukminim2.flixcart.com/image/850/1000/jn3hocw0/poster/k/v/8/medium-hollywood-movie-wall-poster-transformers-5-optimus-prime-original-imaf9uuhqtzr9gpq.jpeg?q=20&crop=false" alt=""> <div class="link"><button class="btt"><a asp-action="Movies">Know more</a></button></div></div>
+            <!--Same image second time past-->
+           
+   </div>
+   </div>
+   <hr>
+   <!-- Hollywood section end-->
+
+   <!-- Footer section start  -->
+    <div class="footer" >
+    <div class="size1">
+      <div class="footer1">
+        <div class="identi">
+        <i class="fa-solid fa-shield-cat"></i>
+        <h1>Movies</h1>
+      </div><br/><br/>
+      <p>This website best option for movie<br>
+      All movie available this website<br>
+     with song Bollywood.
+    </p><br/><br/>
+        <div class="media">
+         <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+         <a href="#"> <i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+         <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="size2">
+      <a asp-action="Index">Home</a><br/>
+            <a asp-action="about">About us</a><br />
+      <a asp-action="Series">Series</a><br/>
+      <a asp-action="Movies">Movies</a><br/>
+      <a asp-action="Contact">Contact us</a><br/>
+    </div>
+    <div class="size3">
+      <button class="log"><a asp-action="Loginform">Login <i class="fa-solid fa-right-long"></i></a></button><br/><br/>
+      <button class="Reg"><a asp-action="Register">Register <i class="fa-solid fa-arrows-turn-right"></i></a></button><br/><br/>
+      <p>India No-01 OTT Platform website</p>
+    </div>
+   </div>
+   <!-- Footer section end -->
+    <hr>
+    <div class="copyright">
+        <p>  <i class="fa-solid fa-copyright"></i> 2024-2025 Copyright by <a asp-action="Admin"> Rakesh </a> : OttPalteform.com</p>
+    </div>
+    <hr>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="~/js/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿@model  ottplatform.Models.Information
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/loginstyle.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css" />
+    <title>Login</title>
+</head>
+<body>
+    <!-- navbar start -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"> <i class="fa-solid fa-shield-cat"></i> Movies</label>
+        <ul>
+            <li><a class="active" asp-action="Index">Home</a></li>
+            <li><a asp-action="about">About us</a></li>
+            <li><a asp-action="Movies">Movies</a></li>
+            <li><a asp-action="Series">Series</a></li>
+            <li><a asp-action="Contact">Contact us</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <!-- navbar end -->
+    <div class="login">
+        <div class="login2">
+            <form method="post" asp-action="Register" class="form">
+                <p>@TempData["message"]</p>
+                <div class="heading">
+                    <h1>Register Form</h1>
+                </div>
+                <div class="section">
+                    Name:<br>
+                    <input type="text" placeholder="Enter name" asp-for="name" />
+                </div>
+                <div class="section">
+                    Email:<br>
+                    <input type="email" placeholder="Enter email" asp-for="email" />
+                </div>
+                <div class="section">
+                    Password:<br>
+                    <input type="password" placeholder="Enter password" asp-for="password" />
+                </div>
+                <div class="for">
+                     <a asp-action="Loginform">Login</a>
+                </div>
+                <button>Register</button>
+
+            </form>
+
+        </div>
+    </div>
+    <hr>
+    <!-- Footer section start  -->
+    <div class="footer">
+        <div class="size1">
+            <div class="footer1">
+                <div class="identi">
+                    <i class="fa-solid fa-shield-cat"></i>
+                    <h1>Movies</h1>
+                </div><br /><br />
+                <p>
+                    This website best option for movie<br>
+                    All movie available this website<br>
+                    with song Bollywood.
+                </p><br /><br />
+                <div class="media">
+                    <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="size2">
+            <a asp-action="Index">Home</a><br />
+            <a asp-action="about">About us</a><br />
+            <a asp-action="Series">Series</a><br />
+            <a asp-action="Movies">Movies</a><br />
+            <a asp-action="Contact">Contact us</a><br />
+        </div>
+        <div class="size3">
+            <button class="log"><a asp-action="Loginform">Login <i class="fa-solid fa-right-long"></i></a></button><br /><br />
+            <button class="Reg"><a asp-action="Register">Register <i class="fa-solid fa-arrows-turn-right"></i></a></button><br /><br />
+            <p>India No-01 OTT Platform website</p>
+        </div>
+    </div>
+    <!-- Footer section end -->
+</body>
+</html>

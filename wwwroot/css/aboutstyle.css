@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   overflow-x: hidden; 
+}
+:root{
+    --red:red;
+    --white:white;
+    --black:black;
+    --rgba:rgba(193, 193, 193,0.3);
+    --random:#42a8f0;
+    --imp:#ff7f7f;
+
+}
+.about{
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    background: var(--black);
+  
+  
+}
+.about1{
+    padding: 20px;
+   
+}
+.about2{
+    padding: 20px;
+}
+.text{
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--white);
+}
+.video{
+    width: 40vw;
+    display: flex;
+ 
+    justify-content: center;
+    margin-top: 100px;
+    border-radius: 0.2vw;
+}
