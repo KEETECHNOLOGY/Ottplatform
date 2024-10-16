@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
 using ottplatform.Models;
+using ottplatform.Service;
 
 
 namespace ottplatform.Controllers
@@ -9,12 +11,14 @@ namespace ottplatform.Controllers
 
         public AppDbContext _Context;
         public IWebHostEnvironment _environment;
+        public EmailSender _emailSender;
 
 
-        public OTTwebsiteController(AppDbContext context, IWebHostEnvironment environment)
+        public OTTwebsiteController(AppDbContext context, IWebHostEnvironment environment,EmailSender emailSender)
         {
             _Context = context;
             _environment = environment;
+            _emailSender = emailSender;
         }
 
         public IActionResult Index()
@@ -206,6 +210,84 @@ namespace ottplatform.Controllers
 
         }
 
+       
+        public IActionResult forgetpassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> sendotp(string email)
+        {
+            var data = _Context.Information.FirstOrDefault(x => x.email == email);
+            if (data != null)
+            {
+                Random rnd = new Random();
+                int num = rnd.Next(1000, 9999);
+
+                HttpContext.Session.SetString("otp", num.ToString());
+                HttpContext.Session.SetString("email", email);
+                string sendto=email;
+                string subject = "otp for Reset Passward";
+                string mail = "Dear " + data.name + ",<br><br>" +
+               "We hope this message finds you well.<br><br>" +
+               "You recently requested to reset your password for your account with us. To ensure the security of your account, we have generated a One-Time Password (OTP) that you will need to proceed with the reset.<br><br>" +
+               "Your OTP is: " + num + "<br><br>" +
+               "Please enter this code in the password reset form within the next 10 minutes, as it will expire after that time for security reasons. If you do not complete the process within this timeframe, you will need to request a new OTP.<br><br>" +
+               "If you did not initiate this request, please disregard this email. Your account remains secure, and no changes have been made.<br><br>" +
+               "For any questions or concerns, or if you require further assistance, please don’t hesitate to reach out to our support team at [support email/contact number]. We are here to help!<br><br>" +
+               "Thank you for your attention to this matter.<br><br>" +
+               "Best regards,\n[Your Company Name] Support Team<br><br>" +
+               "[Your Company Website]";
+
+                await _emailSender.SendEmailAsync(sendto, subject, mail);
+
+                return RedirectToAction("Resetpassword");
+            }
+            else
+            {
+                TempData["msg"] = "This email is not registered with us";
+                return RedirectToAction("forgetpassword");
+            }
+        }
+
+
+        public IActionResult Resetpassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> ResetPassword( string otp,string newpass,string compass)
+        {
+            string orginalotp = HttpContext.Session.GetString("otp");
+            if (otp == orginalotp)
+            {
+                if (newpass == compass)
+                {
+                    string email= HttpContext.Session.GetString("email");
+                    var data=_Context.Information.FirstOrDefault(x=>x.email == email);
+                    data.password= newpass;
+                    _Context.Information.Update(data);
+                    _Context.SaveChanges();
+                   HttpContext.Session.Clear();
+                    return RedirectToAction("Loginform");
+                }
+                else
+                {
+                    TempData["msg"] = "Confirm Password not Matched";
+                    return RedirectToAction("Resetpassword");
+                }
+            }
+            else
+            {
+                TempData["msg"] = "You Entered Incoorect OTP";
+                return RedirectToAction("Resetpassword");
+            }
+
+
+        }
 
     }
 }
